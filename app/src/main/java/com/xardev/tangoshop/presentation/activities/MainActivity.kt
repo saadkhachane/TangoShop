@@ -1,7 +1,8 @@
-package com.xardev.tangoshop
+package com.xardev.tangoshop.presentation.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.xardev.tangoshop.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
