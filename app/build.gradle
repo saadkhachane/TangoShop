@@ -38,6 +38,7 @@ android {
 
 dependencies {
 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def hilt_version = "2.40.5"
     def mvvm_version = "2.4.1"
     def retrofit_version = "2.9.0"
@@ -78,6 +79,8 @@ dependencies {
 
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$retrofit_version"
+
 
     // Okhttp
     implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
@@ -96,4 +99,5 @@ dependencies {
 
     // Lottie
     implementation "com.airbnb.android:lottie:$lottie_version"
+
 }

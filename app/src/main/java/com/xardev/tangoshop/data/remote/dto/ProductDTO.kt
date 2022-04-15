@@ -22,6 +22,4 @@ data class ProductDTO(
             sku,
             slug
         )
-
-
 }

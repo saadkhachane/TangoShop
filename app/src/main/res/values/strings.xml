@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Tango Shop</string>
+    <string name="tango">Tango</string>
+    <string name="shopping_made_easy">SHOPPING MADE EASY</string>
+    <string name="home">Home</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="cart">Cart</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="find_products_you_love">Find products you love..</string>
+    <string name="just">Just</string>
+    <string name="order_now">Order Now</string>
+    <string name="special">Special</string>
+    <string name="deals">Deals</string>
+    <string name="by">by</string>
+    <string name="opps_check_your_internet_and_try_again">Opps! Check your internet \nand try again.</string>
+    <string name="refresh">Refresh</string>
+    <string name="sorry_we_couldn_t_find_nany_products_with_that_name">Sorry we couldn\'t find \nany products with that name.</string>
+    <string name="no_intenet">no intenet</string>
+    <string name="coming_soon">Coming soon!</string>
+    <string name="product_decription">Product decription</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut mcorper suscipit lobortis nisl ut aliquip.</string>
+    <string name="free_worlwide_shipping">Free Worlwide Shipping</string>
+    <string name="add_to_cart">Add to cart</string>
 </resources>
