@@ -10,7 +10,7 @@ data class ProductDTO(
     val product_name: String,
     val sku: String,
     val slug: String
-){
+) {
 
     fun toProduct() =
         Product(

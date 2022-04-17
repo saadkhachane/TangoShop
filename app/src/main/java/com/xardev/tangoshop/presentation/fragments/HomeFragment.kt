@@ -4,11 +4,12 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.transition.TransitionManager
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.hilt.navigation.fragment.hiltNavGraphViewModels
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bumptech.glide.Glide
@@ -20,17 +21,15 @@ import com.xardev.tangoshop.presentation.viewModels.MainViewModel
 import com.xardev.tangoshop.utils.Result.Failure
 import com.xardev.tangoshop.utils.Result.Success
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
 
-    @Inject
-    lateinit var viewModel: MainViewModel
+    val viewModel: MainViewModel by hiltNavGraphViewModels(R.id.nav_graph)
 
-    private val adapter : ProductRecyclerAdapter by lazy {
+    private val adapter: ProductRecyclerAdapter by lazy {
         ProductRecyclerAdapter(requireContext())
     }
 
@@ -38,7 +37,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(layoutInflater,R.layout.fragment_home, container, false)
+        binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_home, container, false)
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
@@ -51,7 +50,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun setSearchListener() {
-        binding.search.addTextChangedListener(object : TextWatcher{
+        binding.search.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
 
@@ -77,7 +76,8 @@ class HomeFragment : Fragment() {
                 }
 
                 Navigation.findNavController(binding.root)
-                    .navigate(R.id.productDetailsActivity,
+                    .navigate(
+                        R.id.productDetailsActivity,
                         bundle,
                         null
                     )
@@ -88,10 +88,10 @@ class HomeFragment : Fragment() {
 
     @Suppress("UNCHECKED_CAST")
     private fun setupObservers() {
-        viewModel.result.observe(viewLifecycleOwner){
+        viewModel.result.observe(viewLifecycleOwner) {
             it?.let {
 
-                when(it){
+                when (it) {
                     is Success -> {
                         viewModel.showFeaturedProducts(it.value as List<Product>)
                         binding.recycler.visibility = View.VISIBLE
@@ -100,28 +100,28 @@ class HomeFragment : Fragment() {
                     is Failure -> {
                         binding.recycler.visibility = View.GONE
                     }
-                    else -> {}
+                    else -> {
+                    }
                 }
-
             }
         }
 
-        viewModel.featuredProduct.observe(viewLifecycleOwner){ product ->
-             product?.let {
+        viewModel.featuredProduct.observe(viewLifecycleOwner) { product ->
+            product?.let {
 
-                 viewModel.startDealsCountDownTimer()
-                 if (binding.featuredProductsCard.isShown.not()) showFeaturedProductsCard()
+                viewModel.startDealsCountDownTimer()
+                if (binding.featuredProductsCard.isShown.not()) showFeaturedProductsCard()
 
-                 val price = "$${product.gross_price}"
-                 binding.featuredPrice.text = price
+                val price = "$${product.gross_price}"
+                binding.featuredPrice.text = price
 
-                  Glide.with(this)
-                        .load(product.images[0].image)
-                        .into(binding.featuredImage)
-             }
-         }
+                Glide.with(this)
+                    .load(product.images[0].image)
+                    .into(binding.featuredImage)
+            }
+        }
 
-        viewModel.dealTimer.observe(viewLifecycleOwner){
+        viewModel.dealTimer.observe(viewLifecycleOwner) {
             it?.let {
                 binding.dealsTimer.timerHour.text = it["hours"]
                 binding.dealsTimer.timerMins.text = it["minutes"]
@@ -137,10 +137,10 @@ class HomeFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        refresh()
+        //refresh()
     }
 
-    private fun refresh(){
+    private fun refresh() {
         if (binding.search.text.isNullOrBlank())
             viewModel.getProducts()
         else

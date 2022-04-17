@@ -38,7 +38,6 @@ android {
 
 dependencies {
 
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def hilt_version = "2.40.5"
     def mvvm_version = "2.4.1"
     def retrofit_version = "2.9.0"
@@ -48,7 +47,9 @@ dependencies {
     def mockito_version = "4.4.0"
     def rxjava_version = "3.0.0"
     def glide_version = "4.13.1"
+    //def slider_version = "1.4.0"
 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
@@ -68,7 +69,8 @@ dependencies {
     // Dagger hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
-    androidTestImplementation  "com.google.dagger:hilt-android-testing:$hilt_version"
+    implementation 'androidx.hilt:hilt-navigation-fragment:1.0.0'
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
     androidTestAnnotationProcessor "com.google.dagger:hilt-compiler:$hilt_version"
     testImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
     testAnnotationProcessor "com.google.dagger:hilt-compiler:$hilt_version"
@@ -99,5 +101,8 @@ dependencies {
 
     // Lottie
     implementation "com.airbnb.android:lottie:$lottie_version"
+
+    // Slider
+    //implementation "com.github.smarteist:autoimageslider:$slider_version"
 
 }

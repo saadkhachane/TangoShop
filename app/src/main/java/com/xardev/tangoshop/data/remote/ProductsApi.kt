@@ -8,9 +8,9 @@ import retrofit2.http.Query
 interface ProductsApi {
 
     @GET("products")
-    fun getProducts() : Single<List<ProductDTO>>
+    fun getProducts(): Single<List<ProductDTO>>
 
     @GET("products")
-    fun getProductsByName(@Query("name") name: String) : Single<List<ProductDTO>>
+    fun getProductsByName(@Query("name") name: String): Single<List<ProductDTO>>
 
 }

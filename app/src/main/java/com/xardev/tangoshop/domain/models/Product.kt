@@ -10,4 +10,4 @@ data class Product(
     val product_name: String,
     val sku: String,
     val slug: String
-): Serializable
+) : Serializable

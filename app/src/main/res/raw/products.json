@@ -1,293 +1,358 @@
-[ {
-  "id" : "ed4e81a0-994c-4d2e-8229-689b9aaa0410",
-  "sku" : "IESPRESSO250M(1)",
-  "slug" : "illy-decaffeinato-kawa-bezkofeinowa-mielona-250g",
-  "product_name" : "Illy - Decaffeinato - kawa bezkofeinowa mielona 250g",
-  "gross_price" : "32.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9JRVNQUkVTU08yNTBNMV81NWYxNDJmM2EwZmNkMmE5MDliNDdiOTIxYWUwODAyNy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
-    "order" : 1
-  }, {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9JRVNQUkVTU08yNTBNMV9jOTM4NTRmNTNjZWYyNmU4Mzc4ZmRlNDIxYmJiY2I3NC5wbmciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "illy",
-    "name" : "Illy"
+[
+  {
+    "id": "ed4e81a0-994c-4d2e-8229-689b9aaa0410",
+    "sku": "IESPRESSO250M(1)",
+    "slug": "illy-decaffeinato-kawa-bezkofeinowa-mielona-250g",
+    "product_name": "Illy - Decaffeinato - kawa bezkofeinowa mielona 250g",
+    "gross_price": "32.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9JRVNQUkVTU08yNTBNMV81NWYxNDJmM2EwZmNkMmE5MDliNDdiOTIxYWUwODAyNy5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
+        "order": 1
+      },
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9JRVNQUkVTU08yNTBNMV9jOTM4NTRmNTNjZWYyNmU4Mzc4ZmRlNDIxYmJiY2I3NC5wbmciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "illy",
+      "name": "Illy"
+    }
+  },
+  {
+    "id": "87d4937f-d173-4532-b3b6-e8b328a8ca02",
+    "sku": "DOCOSTA250",
+    "slug": "dobra-palarnia-kawy-costa-rica-finca-el-venado-kawa-ziarnista-250g",
+    "product_name": "Dobra Palarnia Kawy - Costa Rica Finca El Venado - kawa ziarnista 250g",
+    "gross_price": "45.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9ET0NPU1RBMjUwX2YxMDE0ZjBmZTkxNWJjYTg2ZGVjMmE4ZjM2MGNlMzE3LnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "dobra-palarnia-kawy",
+      "name": "Dobra Palarnia Kawy"
+    }
+  },
+  {
+    "id": "f5f0eaa7-2717-45a0-88be-83f4c0bd8a0e",
+    "sku": "IESPRESSO250M",
+    "slug": "illy-espresso-kawa-mielona-250g",
+    "product_name": "Illy - Classico Espresso - kawa mielona 250g",
+    "gross_price": "32.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9JRVNQUkVTU08yNTBNX2Y1MGY0ODE3ZDA2YWVkYjliOTZmYTYyMjllOWY2Yzg0LmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "illy",
+      "name": "Illy"
+    }
+  },
+  {
+    "id": "1402c080-571a-407c-a068-c50da7cae988",
+    "sku": "MCZKEKI200",
+    "slug": "mala-czarna-kenia-kiangoi-filtr-kawa-ziarnista-200g",
+    "product_name": "Mała Czarna - Kenia Kiangoi Filtr - kawa ziarnista 200g",
+    "gross_price": "48.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9NQ1pLRUtJMjAwXzFmNTRmZTMyZWM5NDJlMTQyMWVlMTNlN2MwYjhhN2Q5LnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "maa-czarna",
+      "name": "Mała Czarna"
+    }
+  },
+  {
+    "id": "8e8aee69-9bca-4999-913b-65c7655946c5",
+    "sku": "MCZKEMU200",
+    "slug": "mala-czarna-kenia-muchagara-filtr-kawa-ziarnista-200g",
+    "product_name": "Mała Czarna - Kenia Muchagara Filtr - kawa ziarnista 200g",
+    "gross_price": "51.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9NQ1pLRU1VMjAwXzg5NTEyZmYwZWUwZmE3NDdkOTJiYjQ2ZWY3MGJkNjM1LnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "maa-czarna",
+      "name": "Mała Czarna"
+    }
+  },
+  {
+    "id": "7178da24-9a6b-4255-a274-3ea988775da0",
+    "sku": "NCKENESTAT250",
+    "slug": "nomad-coffee-kenia-faith-estates-kawa-ziarnista-250g",
+    "product_name": "Nomad Coffee - Kenya Faith Estates - kawa ziarnista 250g",
+    "gross_price": "79.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9OQ0tFTkVTVEFUMjUwX2U2OTYyNDY5ZDUwNDg4OTkyZWVlOWUzNzhiODczNjkwLnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "nomad-coffee",
+      "name": "Nomad Coffee"
+    }
+  },
+  {
+    "id": "77bd3170-22d0-430b-8dde-fa63d7766c46",
+    "sku": "NCRWANDASIMBI250",
+    "slug": "nomad-coffee-rwanda-simbi-kawa-ziarnista-250g",
+    "product_name": "Nomad Coffee - Rwanda Simbi - kawa ziarnista 250g",
+    "gross_price": "58.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9OQ1JXQU5EQVNJTUJJMjUwXzMyOTdlMDUwZjQ4NDJjMTgzMzJlMzViYmI0M2IxZDc1LnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "nomad-coffee",
+      "name": "Nomad Coffee"
+    }
+  },
+  {
+    "id": "096c240f-3a75-4d77-b16a-bd98f50f1e18",
+    "sku": "PROPERKENIAKAM250",
+    "slug": "proper-kenia-kamwangi-filtr-kawa-ziarnista-250g",
+    "product_name": "Proper - Kenia Kamwangi Filtr - kawa ziarnista 250g",
+    "gross_price": "55.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9QUk9QRVJLRU5JQUtBTTI1MF84MDQyZGZjMjI4MmJmZTMzZmRiOTlmOWIzMGY5ZjE1OS5wbmciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "proper",
+      "name": "Proper"
+    }
+  },
+  {
+    "id": "1c242610-b509-4cbf-a927-405b5cd0c82b",
+    "sku": "PROPEHONDURASEL250",
+    "slug": "proper-honduras-el-caracol-filtr-kawa-ziarnista-250g",
+    "product_name": "Proper - Honduras El Caracol Filtr - kawa ziarnista 250g",
+    "gross_price": "56.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9QUk9QRUhPTkRVUkFTRUwyNTBfN2QyOGNmY2ZhMjJkNWFlMGQ4M2VmZTYzMTkzZWUzZWUucG5nIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogNjQwLCAiaGVpZ2h0IjogNjQwLCAiZml0IjogImluc2lkZSJ9fX0=",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "proper",
+      "name": "Proper"
+    }
+  },
+  {
+    "id": "35a09354-0e0d-453d-a599-6db7ee85308b",
+    "sku": "PROPERGWATFINCA250",
+    "slug": "proper-gwatemala-finca-buenos-aires-filtr-kawa-ziarnista-250g",
+    "product_name": "Proper - Gwatemala Finca Buenos Aires Filtr - kawa ziarnista 250g",
+    "gross_price": "46.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9QUk9QRVJHV0FURklOQ0EyNTBfMDVlOWQzZGM1YzFiZjQxNTUxZjgzNTkyOWQ1NTQwOTcucG5nIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogNjQwLCAiaGVpZ2h0IjogNjQwLCAiZml0IjogImluc2lkZSJ9fX0=",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "proper",
+      "name": "Proper"
+    }
+  },
+  {
+    "id": "42c2032d-b74e-4075-a936-1adee4f8d3a7",
+    "sku": "PROPERETGUBETA",
+    "slug": "proper-etiopia-gubeta-kawa-ziarnista-250g",
+    "product_name": "Proper - Etiopia Gubeta - kawa ziarnista 250g",
+    "gross_price": "53.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9QUk9QRVJFVEdVQkVUQV9jZmQ0ZmJiODUyYjY3NWIyYWVjOTY0MTBhNzFhNjI5Ny5wbmciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "proper",
+      "name": "Proper"
+    }
+  },
+  {
+    "id": "d5c02e82-ad51-45d5-984e-ee71d8db6647",
+    "sku": "PROPEHONDURASSANISID",
+    "slug": "proper-honduras-san-isidro-filtr-kawa-ziarnista-250g",
+    "product_name": "Proper - Honduras San Isidro Filtr - kawa ziarnista 250g",
+    "gross_price": "59.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9QUk9QRUhPTkRVUkFTU0FOSVNJRF84MDEyYzNlMzIxYTcyOGNjYmY3MzhkZDI1MGMxYjhjMS5wbmciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "proper",
+      "name": "Proper"
+    }
+  },
+  {
+    "id": "e6e0cd48-5d64-48b7-bb58-90f671173030",
+    "sku": "BLESSSIND1KG(1)",
+    "slug": "bless-espresso-india-kawa-ziarnista-1kg",
+    "product_name": "Bless - Espresso India - kawa ziarnista 1kg",
+    "gross_price": "82.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9CTEVTU1NJTkQxS0cxXzRhY2IwMjdlNTM5Njc4MDQ0ODEwMjdkYmE0OGFhYmE4LnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "bless",
+      "name": "Bless"
+    }
+  },
+  {
+    "id": "6597b8b4-6305-4971-9faa-b54eb67b54e3",
+    "sku": "AUDUNKENMUCH250",
+    "slug": "audun-coffee-kenya-muchagara-kawa-ziarnista-250g",
+    "product_name": "Audun Coffee - Kenya Muchagara - kawa ziarnista 250g",
+    "gross_price": "70.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9BVURVTktFTk1VQ0gyNTBfNDAyOTZiZmExYmE3ODEzYjNiZTA5NGJiOTRjZGZmYTIucG5nIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogNjQwLCAiaGVpZ2h0IjogNjQwLCAiZml0IjogImluc2lkZSJ9fX0=",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "audun-coffee",
+      "name": "Audun Coffee"
+    }
+  },
+  {
+    "id": "8ea2302b-3d56-4c5f-bc51-b623bc7880b3",
+    "sku": "HAYBHONDNEL250",
+    "slug": "hayb-honduras-nely-suyapa-orellana-kawa-ziarnista-250g",
+    "product_name": "HAYB - Honduras Nely Suyapa Orellana - kawa ziarnista 250g",
+    "gross_price": "60.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCSE9ORE5FTDI1MF8wODFkYzI5YThkOGVkMDQzOTU1MTM1MWM3YmE4ZjMyZi5wbmciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
+        "order": 1
+      },
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCSE9ORE5FTDI1MF81ODE2N2Y0ZjkwMmNhYWQwM2QyZTQ4ZmU1MTNmMWQ1Ni5wbmciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
+        "order": 2
+      }
+    ],
+    "manufacturer": {
+      "slug": "hayb",
+      "name": "HAYB"
+    }
+  },
+  {
+    "id": "bfeb77ec-e151-427c-8716-8ea457069468",
+    "sku": "HAYBKOSTALMA250",
+    "slug": "hayb-costa-rica-las-lajas-alma-negra-natural-kawa-ziarnista-250g",
+    "product_name": "HAYB - Costa Rica Las Lajas Alma Negra, Natural - kawa ziarnista 250g",
+    "gross_price": "68.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCS09TVEFMTUEyNTBfM2ZjODkwN2RjMmIwNjQ0MWE0MTA0ZDk5ZTFjZTE5YTUucG5nIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogNjQwLCAiaGVpZ2h0IjogNjQwLCAiZml0IjogImluc2lkZSJ9fX0=",
+        "order": 1
+      },
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCS09TVEFMTUEyNTBfOTQ1MjgwMDIyZTI5ZjI3NTc3N2U3MmIxMjlhYTRlM2QucG5nIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogNjQwLCAiaGVpZ2h0IjogNjQwLCAiZml0IjogImluc2lkZSJ9fX0=",
+        "order": 2
+      }
+    ],
+    "manufacturer": {
+      "slug": "hayb",
+      "name": "HAYB"
+    }
+  },
+  {
+    "id": "cd226cb8-e8f7-4f18-a03c-8a8496e5bf57",
+    "sku": "HAYBBRAZDANILSON",
+    "slug": "hayb-salwador-los-pirineos-lot-16-black-honey-kawa-ziarnista-250g",
+    "product_name": "HAYB - Brazylia Furnas Denilson Antonio Costa - filtr - kawa ziarnista 250g",
+    "gross_price": "55.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCQlJBWkRBTklMU09OXzkyMDEyM2NmYzg4MGM2NDQwMWQxNmIyODFhY2M0YmJhLnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "hayb",
+      "name": "HAYB"
+    }
+  },
+  {
+    "id": "f4a795b4-079a-462d-b8b4-36da68ff6309",
+    "sku": "HAYBPERUELVIS250",
+    "slug": "hayb-peru-elvis-reneiro-tineo-washed-kawa-ziarnista-250g",
+    "product_name": "HAYB - Peru Elvis Reneiro Tineo Washed - kawa ziarnista 250g",
+    "gross_price": "65.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCUEVSVUVMVklTMjUwXzY0NGExMWE4ZTc4NjA2ZDYxMDUzODBmNWI2ZDQ5YjNjLnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
+        "order": 1
+      },
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCUEVSVUVMVklTMjUwX2MzODlkNDg0NmZhMDk0MWM2OGViZjkwM2YxNjAyNDEyLnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
+        "order": 2
+      }
+    ],
+    "manufacturer": {
+      "slug": "hayb",
+      "name": "HAYB"
+    }
+  },
+  {
+    "id": "5632a92b-2a7c-48a8-ba2f-8a60ee42d7c7",
+    "sku": "CLBOLIWKANT250",
+    "slug": "coffeelab-boliwia-kantutani-kawa-ziarnista-250g",
+    "product_name": "CoffeeLab - Boliwia Kantutani - kawa ziarnista 250g",
+    "gross_price": "62.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9DTEJPTElXS0FOVDI1MF8zMTdlZjFlYjU0MmI4ZDQyNTA3ZWNjM2I1N2RhOGNjNS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "coffeelab",
+      "name": "CoffeeLab"
+    }
+  },
+  {
+    "id": "b28cc4b4-4a49-4ba9-8e4e-2e0933a7c750",
+    "sku": "CLRWANMUHAZIESP250",
+    "slug": "coffeelab-rwanda-muhazi-kawa-ziarnista-250g",
+    "product_name": "CoffeeLab - Rwanda Muhazi - kawa ziarnista 250g",
+    "gross_price": "57.00",
+    "images": [
+      {
+        "image": "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9DTFJXQU5NVUhBWklFU1AyNTBfOTExN2RkNjdjZTk3MzRjYjNmNWU0NTBmYWQ0ZTQ5ZGYucG5nIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogNjQwLCAiaGVpZ2h0IjogNjQwLCAiZml0IjogImluc2lkZSJ9fX0=",
+        "order": 1
+      }
+    ],
+    "manufacturer": {
+      "slug": "coffeelab",
+      "name": "CoffeeLab"
+    }
   }
-}, {
-  "id" : "87d4937f-d173-4532-b3b6-e8b328a8ca02",
-  "sku" : "DOCOSTA250",
-  "slug" : "dobra-palarnia-kawy-costa-rica-finca-el-venado-kawa-ziarnista-250g",
-  "product_name" : "Dobra Palarnia Kawy - Costa Rica Finca El Venado - kawa ziarnista 250g",
-  "gross_price" : "45.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9ET0NPU1RBMjUwX2YxMDE0ZjBmZTkxNWJjYTg2ZGVjMmE4ZjM2MGNlMzE3LnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "dobra-palarnia-kawy",
-    "name" : "Dobra Palarnia Kawy"
-  }
-}, {
-  "id" : "f5f0eaa7-2717-45a0-88be-83f4c0bd8a0e",
-  "sku" : "IESPRESSO250M",
-  "slug" : "illy-espresso-kawa-mielona-250g",
-  "product_name" : "Illy - Classico Espresso - kawa mielona 250g",
-  "gross_price" : "32.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9JRVNQUkVTU08yNTBNX2Y1MGY0ODE3ZDA2YWVkYjliOTZmYTYyMjllOWY2Yzg0LmpwZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "illy",
-    "name" : "Illy"
-  }
-}, {
-  "id" : "1402c080-571a-407c-a068-c50da7cae988",
-  "sku" : "MCZKEKI200",
-  "slug" : "mala-czarna-kenia-kiangoi-filtr-kawa-ziarnista-200g",
-  "product_name" : "Mała Czarna - Kenia Kiangoi Filtr - kawa ziarnista 200g",
-  "gross_price" : "48.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9NQ1pLRUtJMjAwXzFmNTRmZTMyZWM5NDJlMTQyMWVlMTNlN2MwYjhhN2Q5LnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "maa-czarna",
-    "name" : "Mała Czarna"
-  }
-}, {
-  "id" : "8e8aee69-9bca-4999-913b-65c7655946c5",
-  "sku" : "MCZKEMU200",
-  "slug" : "mala-czarna-kenia-muchagara-filtr-kawa-ziarnista-200g",
-  "product_name" : "Mała Czarna - Kenia Muchagara Filtr - kawa ziarnista 200g",
-  "gross_price" : "51.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9NQ1pLRU1VMjAwXzg5NTEyZmYwZWUwZmE3NDdkOTJiYjQ2ZWY3MGJkNjM1LnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "maa-czarna",
-    "name" : "Mała Czarna"
-  }
-}, {
-  "id" : "7178da24-9a6b-4255-a274-3ea988775da0",
-  "sku" : "NCKENESTAT250",
-  "slug" : "nomad-coffee-kenia-faith-estates-kawa-ziarnista-250g",
-  "product_name" : "Nomad Coffee - Kenya Faith Estates - kawa ziarnista 250g",
-  "gross_price" : "79.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9OQ0tFTkVTVEFUMjUwX2U2OTYyNDY5ZDUwNDg4OTkyZWVlOWUzNzhiODczNjkwLnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "nomad-coffee",
-    "name" : "Nomad Coffee"
-  }
-}, {
-  "id" : "77bd3170-22d0-430b-8dde-fa63d7766c46",
-  "sku" : "NCRWANDASIMBI250",
-  "slug" : "nomad-coffee-rwanda-simbi-kawa-ziarnista-250g",
-  "product_name" : "Nomad Coffee - Rwanda Simbi - kawa ziarnista 250g",
-  "gross_price" : "58.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9OQ1JXQU5EQVNJTUJJMjUwXzMyOTdlMDUwZjQ4NDJjMTgzMzJlMzViYmI0M2IxZDc1LnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "nomad-coffee",
-    "name" : "Nomad Coffee"
-  }
-}, {
-  "id" : "096c240f-3a75-4d77-b16a-bd98f50f1e18",
-  "sku" : "PROPERKENIAKAM250",
-  "slug" : "proper-kenia-kamwangi-filtr-kawa-ziarnista-250g",
-  "product_name" : "Proper - Kenia Kamwangi Filtr - kawa ziarnista 250g",
-  "gross_price" : "55.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9QUk9QRVJLRU5JQUtBTTI1MF84MDQyZGZjMjI4MmJmZTMzZmRiOTlmOWIzMGY5ZjE1OS5wbmciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "proper",
-    "name" : "Proper"
-  }
-}, {
-  "id" : "1c242610-b509-4cbf-a927-405b5cd0c82b",
-  "sku" : "PROPEHONDURASEL250",
-  "slug" : "proper-honduras-el-caracol-filtr-kawa-ziarnista-250g",
-  "product_name" : "Proper - Honduras El Caracol Filtr - kawa ziarnista 250g",
-  "gross_price" : "56.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9QUk9QRUhPTkRVUkFTRUwyNTBfN2QyOGNmY2ZhMjJkNWFlMGQ4M2VmZTYzMTkzZWUzZWUucG5nIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogNjQwLCAiaGVpZ2h0IjogNjQwLCAiZml0IjogImluc2lkZSJ9fX0=",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "proper",
-    "name" : "Proper"
-  }
-}, {
-  "id" : "35a09354-0e0d-453d-a599-6db7ee85308b",
-  "sku" : "PROPERGWATFINCA250",
-  "slug" : "proper-gwatemala-finca-buenos-aires-filtr-kawa-ziarnista-250g",
-  "product_name" : "Proper - Gwatemala Finca Buenos Aires Filtr - kawa ziarnista 250g",
-  "gross_price" : "46.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9QUk9QRVJHV0FURklOQ0EyNTBfMDVlOWQzZGM1YzFiZjQxNTUxZjgzNTkyOWQ1NTQwOTcucG5nIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogNjQwLCAiaGVpZ2h0IjogNjQwLCAiZml0IjogImluc2lkZSJ9fX0=",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "proper",
-    "name" : "Proper"
-  }
-}, {
-  "id" : "42c2032d-b74e-4075-a936-1adee4f8d3a7",
-  "sku" : "PROPERETGUBETA",
-  "slug" : "proper-etiopia-gubeta-kawa-ziarnista-250g",
-  "product_name" : "Proper - Etiopia Gubeta - kawa ziarnista 250g",
-  "gross_price" : "53.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9QUk9QRVJFVEdVQkVUQV9jZmQ0ZmJiODUyYjY3NWIyYWVjOTY0MTBhNzFhNjI5Ny5wbmciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "proper",
-    "name" : "Proper"
-  }
-}, {
-  "id" : "d5c02e82-ad51-45d5-984e-ee71d8db6647",
-  "sku" : "PROPEHONDURASSANISID",
-  "slug" : "proper-honduras-san-isidro-filtr-kawa-ziarnista-250g",
-  "product_name" : "Proper - Honduras San Isidro Filtr - kawa ziarnista 250g",
-  "gross_price" : "59.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9QUk9QRUhPTkRVUkFTU0FOSVNJRF84MDEyYzNlMzIxYTcyOGNjYmY3MzhkZDI1MGMxYjhjMS5wbmciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "proper",
-    "name" : "Proper"
-  }
-}, {
-  "id" : "e6e0cd48-5d64-48b7-bb58-90f671173030",
-  "sku" : "BLESSSIND1KG(1)",
-  "slug" : "bless-espresso-india-kawa-ziarnista-1kg",
-  "product_name" : "Bless - Espresso India - kawa ziarnista 1kg",
-  "gross_price" : "82.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9CTEVTU1NJTkQxS0cxXzRhY2IwMjdlNTM5Njc4MDQ0ODEwMjdkYmE0OGFhYmE4LnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "bless",
-    "name" : "Bless"
-  }
-}, {
-  "id" : "6597b8b4-6305-4971-9faa-b54eb67b54e3",
-  "sku" : "AUDUNKENMUCH250",
-  "slug" : "audun-coffee-kenya-muchagara-kawa-ziarnista-250g",
-  "product_name" : "Audun Coffee - Kenya Muchagara - kawa ziarnista 250g",
-  "gross_price" : "70.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9BVURVTktFTk1VQ0gyNTBfNDAyOTZiZmExYmE3ODEzYjNiZTA5NGJiOTRjZGZmYTIucG5nIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogNjQwLCAiaGVpZ2h0IjogNjQwLCAiZml0IjogImluc2lkZSJ9fX0=",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "audun-coffee",
-    "name" : "Audun Coffee"
-  }
-}, {
-  "id" : "8ea2302b-3d56-4c5f-bc51-b623bc7880b3",
-  "sku" : "HAYBHONDNEL250",
-  "slug" : "hayb-honduras-nely-suyapa-orellana-kawa-ziarnista-250g",
-  "product_name" : "HAYB - Honduras Nely Suyapa Orellana - kawa ziarnista 250g",
-  "gross_price" : "60.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCSE9ORE5FTDI1MF8wODFkYzI5YThkOGVkMDQzOTU1MTM1MWM3YmE4ZjMyZi5wbmciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
-    "order" : 1
-  }, {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCSE9ORE5FTDI1MF81ODE2N2Y0ZjkwMmNhYWQwM2QyZTQ4ZmU1MTNmMWQ1Ni5wbmciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
-    "order" : 2
-  } ],
-  "manufacturer" : {
-    "slug" : "hayb",
-    "name" : "HAYB"
-  }
-}, {
-  "id" : "bfeb77ec-e151-427c-8716-8ea457069468",
-  "sku" : "HAYBKOSTALMA250",
-  "slug" : "hayb-costa-rica-las-lajas-alma-negra-natural-kawa-ziarnista-250g",
-  "product_name" : "HAYB - Costa Rica Las Lajas Alma Negra, Natural - kawa ziarnista 250g",
-  "gross_price" : "68.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCS09TVEFMTUEyNTBfM2ZjODkwN2RjMmIwNjQ0MWE0MTA0ZDk5ZTFjZTE5YTUucG5nIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogNjQwLCAiaGVpZ2h0IjogNjQwLCAiZml0IjogImluc2lkZSJ9fX0=",
-    "order" : 1
-  }, {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCS09TVEFMTUEyNTBfOTQ1MjgwMDIyZTI5ZjI3NTc3N2U3MmIxMjlhYTRlM2QucG5nIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogNjQwLCAiaGVpZ2h0IjogNjQwLCAiZml0IjogImluc2lkZSJ9fX0=",
-    "order" : 2
-  } ],
-  "manufacturer" : {
-    "slug" : "hayb",
-    "name" : "HAYB"
-  }
-}, {
-  "id" : "cd226cb8-e8f7-4f18-a03c-8a8496e5bf57",
-  "sku" : "HAYBBRAZDANILSON",
-  "slug" : "hayb-salwador-los-pirineos-lot-16-black-honey-kawa-ziarnista-250g",
-  "product_name" : "HAYB - Brazylia Furnas Denilson Antonio Costa - filtr - kawa ziarnista 250g",
-  "gross_price" : "55.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCQlJBWkRBTklMU09OXzkyMDEyM2NmYzg4MGM2NDQwMWQxNmIyODFhY2M0YmJhLnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "hayb",
-    "name" : "HAYB"
-  }
-}, {
-  "id" : "f4a795b4-079a-462d-b8b4-36da68ff6309",
-  "sku" : "HAYBPERUELVIS250",
-  "slug" : "hayb-peru-elvis-reneiro-tineo-washed-kawa-ziarnista-250g",
-  "product_name" : "HAYB - Peru Elvis Reneiro Tineo Washed - kawa ziarnista 250g",
-  "gross_price" : "65.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCUEVSVUVMVklTMjUwXzY0NGExMWE4ZTc4NjA2ZDYxMDUzODBmNWI2ZDQ5YjNjLnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
-    "order" : 1
-  }, {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9IQVlCUEVSVUVMVklTMjUwX2MzODlkNDg0NmZhMDk0MWM2OGViZjkwM2YxNjAyNDEyLnBuZyIsICJlZGl0cyI6IHsicmVzaXplIjogeyJ3aWR0aCI6IDY0MCwgImhlaWdodCI6IDY0MCwgImZpdCI6ICJpbnNpZGUifX19",
-    "order" : 2
-  } ],
-  "manufacturer" : {
-    "slug" : "hayb",
-    "name" : "HAYB"
-  }
-}, {
-  "id" : "5632a92b-2a7c-48a8-ba2f-8a60ee42d7c7",
-  "sku" : "CLBOLIWKANT250",
-  "slug" : "coffeelab-boliwia-kantutani-kawa-ziarnista-250g",
-  "product_name" : "CoffeeLab - Boliwia Kantutani - kawa ziarnista 250g",
-  "gross_price" : "62.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9DTEJPTElXS0FOVDI1MF8zMTdlZjFlYjU0MmI4ZDQyNTA3ZWNjM2I1N2RhOGNjNS5qcGciLCAiZWRpdHMiOiB7InJlc2l6ZSI6IHsid2lkdGgiOiA2NDAsICJoZWlnaHQiOiA2NDAsICJmaXQiOiAiaW5zaWRlIn19fQ==",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "coffeelab",
-    "name" : "CoffeeLab"
-  }
-}, {
-  "id" : "b28cc4b4-4a49-4ba9-8e4e-2e0933a7c750",
-  "sku" : "CLRWANMUHAZIESP250",
-  "slug" : "coffeelab-rwanda-muhazi-kawa-ziarnista-250g",
-  "product_name" : "CoffeeLab - Rwanda Muhazi - kawa ziarnista 250g",
-  "gross_price" : "57.00",
-  "images" : [ {
-    "image" : "https://image-service.getbeans.de/eyJidWNrZXQiOiAiYmVhbnMtc3RhdGljIiwgImtleSI6ICJwcm9kdWN0cy9DTFJXQU5NVUhBWklFU1AyNTBfOTExN2RkNjdjZTk3MzRjYjNmNWU0NTBmYWQ0ZTQ5ZGYucG5nIiwgImVkaXRzIjogeyJyZXNpemUiOiB7IndpZHRoIjogNjQwLCAiaGVpZ2h0IjogNjQwLCAiZml0IjogImluc2lkZSJ9fX0=",
-    "order" : 1
-  } ],
-  "manufacturer" : {
-    "slug" : "coffeelab",
-    "name" : "CoffeeLab"
-  }
-} ]
+]

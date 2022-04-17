@@ -10,6 +10,7 @@ import com.xardev.tangoshop.domain.schedulers.SchedulersProvider
 import com.xardev.tangoshop.utils.Result
 import com.xardev.tangoshop.utils.Result.Failure
 import com.xardev.tangoshop.utils.Result.Success
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.disposables.Disposable
@@ -17,6 +18,7 @@ import java.io.IOException
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
+@HiltViewModel
 class MainViewModel @Inject constructor(
     private val repository: ProductRepository,
     private val schedulers: SchedulersProvider
@@ -47,6 +49,10 @@ class MainViewModel @Inject constructor(
 
     private val disposables = CompositeDisposable()
 
+    init {
+        getProducts()
+    }
+
     fun getProducts() {
 
         showLoading()
@@ -58,7 +64,6 @@ class MainViewModel @Inject constructor(
                 hideLoading()
                 hideNetworkError()
                 if (value.isEmpty()) showNoProducts() else hideNoProducts()
-
                 _result.postValue(Success(value))
             },
                 { error ->
@@ -141,7 +146,7 @@ class MainViewModel @Inject constructor(
 
         val time = 1000 * 60 * 60 * 24
 
-        if(isCountDownCancelled){
+        if (isCountDownCancelled) {
             isCountDownCancelled = false
 
             countDownTimer = object : CountDownTimer(time.toLong(), 1000) {
