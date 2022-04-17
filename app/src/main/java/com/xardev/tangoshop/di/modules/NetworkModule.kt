@@ -18,7 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class NetworkModule {
 
     @Provides
-    fun getRetrofit() : Retrofit {
+    fun getRetrofit(): Retrofit {
 
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = Level.BASIC
@@ -36,7 +36,7 @@ class NetworkModule {
     }
 
     @Provides
-    fun getProductsApi(retrofit: Retrofit) : ProductsApi{
+    fun getProductsApi(retrofit: Retrofit): ProductsApi {
         return retrofit.create(ProductsApi::class.java)
     }
 

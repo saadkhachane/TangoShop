@@ -40,7 +40,7 @@ fun <T> Result<T>.getOrNull(): T? =
         else -> null
     }
 
- fun <T> Result<T>.exceptionOrNull(): Throwable? =
+fun <T> Result<T>.exceptionOrNull(): Throwable? =
     when (this) {
         is Result.Failure -> this.error
         else -> null

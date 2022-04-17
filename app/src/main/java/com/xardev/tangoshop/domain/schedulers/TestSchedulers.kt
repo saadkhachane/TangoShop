@@ -2,7 +2,6 @@ package com.xardev.tangoshop.domain.schedulers
 
 import io.reactivex.rxjava3.core.Scheduler
 import io.reactivex.rxjava3.schedulers.Schedulers
-import io.reactivex.rxjava3.schedulers.TestScheduler
 
 object TestSchedulers : SchedulersProvider {
     private val testScheduler = Schedulers.trampoline()

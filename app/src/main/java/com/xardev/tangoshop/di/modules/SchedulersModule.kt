@@ -12,7 +12,7 @@ import dagger.hilt.components.SingletonComponent
 class SchedulersModule {
 
     @Provides
-    fun getSchedulersProvider() : SchedulersProvider{
+    fun getSchedulersProvider(): SchedulersProvider {
         return DefaultSchedulers
     }
 

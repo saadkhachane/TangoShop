@@ -22,13 +22,14 @@ class ProductRecyclerAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductsViewHolder {
         val binding = DataBindingUtil.inflate<ItemProductPromoBinding>(
-            LayoutInflater.from(context), R.layout.item_product_promo, parent, false)
+            LayoutInflater.from(context), R.layout.item_product_promo, parent, false
+        )
 
         return ProductsViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ProductsViewHolder, position: Int) {
-        if (list.isNotEmpty()){
+        if (list.isNotEmpty()) {
 
             val product = list[position]
             val binding = holder.binding
@@ -45,7 +46,8 @@ class ProductRecyclerAdapter(
                 }
 
                 Navigation.findNavController(binding.root)
-                    .navigate(R.id.productDetailsActivity,
+                    .navigate(
+                        R.id.productDetailsActivity,
                         bundle,
                         null
                     )
@@ -66,5 +68,6 @@ class ProductRecyclerAdapter(
         diffResult.dispatchUpdatesTo(this)
     }
 
-    class ProductsViewHolder(var binding: ItemProductPromoBinding) : RecyclerView.ViewHolder(binding.root)
+    class ProductsViewHolder(var binding: ItemProductPromoBinding) :
+        RecyclerView.ViewHolder(binding.root)
 }

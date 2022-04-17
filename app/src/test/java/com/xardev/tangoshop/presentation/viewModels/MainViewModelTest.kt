@@ -40,7 +40,7 @@ class MainViewModelTest : TestCase() {
     private val products = getProductsList()
 
     @Before
-    fun setup(){
+    fun setup() {
         MockitoAnnotations.openMocks(this)
         viewModel = MainViewModel(repository, TestSchedulers)
     }
@@ -184,14 +184,13 @@ class MainViewModelTest : TestCase() {
     }
 
 
-
-    private fun getProductsList() : List<Product>{
+    private fun getProductsList(): List<Product> {
         val file = File("src\\main\\res\\raw\\products.json")
         val json = file.bufferedReader().use { it.readText() }
         return Gson().fromJson(json, Array<Product>::class.java).asList()
     }
 
-    private fun getProductsListByName(name: String) : List<Product>{
+    private fun getProductsListByName(name: String): List<Product> {
         return products.filter { it.product_name.contains(name) }
     }
 
