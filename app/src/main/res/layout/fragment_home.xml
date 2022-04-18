@@ -74,12 +74,9 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/featured_products_card"
                         android:layout_width="0dp"
-                        android:layout_height="160dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="24dp"
                         app:cardCornerRadius="8dp"
-                        app:contentPadding="16dp"
-                        android:clickable="true"
-                        android:focusable="true"
                         android:visibility="gone"
                         tools:visibility="visible"
                         app:layout_constraintEnd_toEndOf="@+id/search"
@@ -88,80 +85,42 @@
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="wrap_content">
 
-                            <ImageView
-                                android:id="@+id/featured_image"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_marginStart="32dp"
-                                android:layout_marginEnd="32dp"
-                                android:src="@drawable/ic_product_image"
+                            <androidx.viewpager.widget.ViewPager
+                                android:id="@+id/viewPager"
+                                android:layout_width="match_parent"
+                                android:layout_height="160dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toStartOf="@+id/btn_order_now"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                tools:ignore="ContentDescription" />
-
-                            <TextView
-                                android:id="@+id/textView2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginEnd="24dp"
-                                android:fontFamily="@font/metropolis_bolditalic"
-                                android:text="@string/just"
-                                android:textColor="@color/text_primary"
-                                app:layout_constraintBottom_toTopOf="@+id/featured_price"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_chainStyle="packed" />
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
 
-                            <TextView
-                                android:id="@+id/featured_price"
+                            <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/tabLayout"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/metropolis_extrabolditalic"
-                                android:textColor="@color/text_primary"
-                                android:textSize="30sp"
-                                app:layout_constraintBottom_toTopOf="@+id/btn_order_now"
-                                app:layout_constraintEnd_toEndOf="@+id/textView2"
-                                app:layout_constraintTop_toBottomOf="@+id/textView2"
-                                tools:text="$45" />
-
-                            <Button
-                                android:id="@+id/btn_order_now"
-                                android:layout_width="wrap_content"
-                                android:layout_height="24dp"
-                                android:backgroundTint="@color/secondary"
-                                android:fontFamily="@font/metropolis_bolditalic"
-                                android:insetTop="0dp"
-                                android:insetBottom="0dp"
-                                android:paddingLeft="16dp"
-                                android:paddingTop="0dp"
-                                android:paddingRight="16dp"
-                                android:paddingBottom="0dp"
-                                android:text="@string/order_now"
-                                android:textAllCaps="false"
-                                android:textColor="@color/white"
-                                android:textSize="10sp"
-                                app:cornerRadius="12dp"
+                                android:layout_height="10dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="@+id/featured_price"
-                                app:layout_constraintTop_toBottomOf="@+id/featured_price"
-                                tools:ignore="SmallSp" />
-
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:tabBackground="@drawable/indicator_selector"
+                                app:tabGravity="center"
+                                app:tabIndicatorHeight="0dp"
+                                app:tabMaxWidth="13dp"/>
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
+
                     </androidx.cardview.widget.CardView>
 
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="35dp"
                         android:fontFamily="@font/metropolis_extrabolditalic"
                         android:text="@string/special"
                         android:textSize="18sp"
+                        android:layout_marginTop="24dp"
                         app:layout_constraintStart_toStartOf="@+id/search"
                         app:layout_constraintTop_toBottomOf="@+id/featured_products_card" />
 
@@ -169,13 +128,12 @@
                         android:id="@+id/textView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="35dp"
                         android:fontFamily="@font/metropolis_extrabolditalic"
                         android:text="@string/deals"
                         android:textColor="@color/secondary"
                         android:textSize="18sp"
                         app:layout_constraintStart_toEndOf="@+id/textView4"
-                        app:layout_constraintTop_toBottomOf="@+id/featured_products_card" />
+                        app:layout_constraintTop_toTopOf="@+id/textView4" />
 
                     <include
                         android:id="@+id/deals_timer"

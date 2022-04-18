@@ -42,7 +42,9 @@ class MainViewModelTest : TestCase() {
     @Before
     fun setup() {
         MockitoAnnotations.openMocks(this)
-        viewModel = MainViewModel(repository, TestSchedulers)
+
+        `when`(repository.getProducts())
+            .thenAnswer { Single.just(products) }
     }
 
     @Test
@@ -51,6 +53,7 @@ class MainViewModelTest : TestCase() {
         `when`(repository.getProducts())
             .thenAnswer { Single.just(emptyList<Product>()) }
 
+        viewModel = MainViewModel(repository, TestSchedulers)
         viewModel.isLoading.observeForever(observer)
 
         // Act
@@ -67,6 +70,7 @@ class MainViewModelTest : TestCase() {
         `when`(repository.getProducts())
             .thenReturn(Single.just(emptyList()))
 
+        viewModel = MainViewModel(repository, TestSchedulers)
         viewModel.noProductsAvailable.observeForever(observer)
 
         // Act
@@ -82,6 +86,7 @@ class MainViewModelTest : TestCase() {
         `when`(repository.getProducts())
             .thenAnswer { Single.just(getProductsList()) }
 
+        viewModel = MainViewModel(repository, TestSchedulers)
         viewModel.noProductsAvailable.observeForever(observer)
 
         // Act
@@ -97,6 +102,7 @@ class MainViewModelTest : TestCase() {
         `when`(repository.getProducts())
             .thenAnswer { Single.just(products) }
 
+        viewModel = MainViewModel(repository, TestSchedulers)
         viewModel.result.observeForever(observer)
 
         // Act
@@ -115,6 +121,7 @@ class MainViewModelTest : TestCase() {
         `when`(repository.getProducts())
             .thenAnswer { Single.error<Throwable>(Exception()) }
 
+        viewModel = MainViewModel(repository, TestSchedulers)
         viewModel.result.observeForever(observer)
 
         // Act
@@ -132,6 +139,7 @@ class MainViewModelTest : TestCase() {
         `when`(repository.getProducts())
             .thenAnswer { Single.error<Throwable>(IOException()) }
 
+        viewModel = MainViewModel(repository, TestSchedulers)
         viewModel.networkError.observeForever(observer)
 
         // Act
@@ -148,10 +156,12 @@ class MainViewModelTest : TestCase() {
     fun `getProductsByName() Given Empty response Returns Success with EmptyList`() {
         // Arrange
         val name = "Random Name"
+        val list = getProductsListByName(name)
 
         `when`(repository.getProductsByName(name))
-            .thenAnswer { Single.just(emptyList<Product>()) }
+            .thenAnswer { Single.just(list) }
 
+        viewModel = MainViewModel(repository, TestSchedulers)
         viewModel.result.observeForever(observer)
 
         // Act
@@ -164,7 +174,7 @@ class MainViewModelTest : TestCase() {
     }
 
     @Test
-    fun `getProductsByName() Given Products List Returns Success with the Given list`() {
+    fun `getProductsByName() Given Products List Returns Success with the filtered list`() {
         // Arrange
         val name = "dobra"
         val list = getProductsListByName(name)
@@ -172,6 +182,7 @@ class MainViewModelTest : TestCase() {
         `when`(repository.getProductsByName(name))
             .thenAnswer { Single.just(list) }
 
+        viewModel = MainViewModel(repository, TestSchedulers)
         viewModel.result.observeForever(observer)
 
         // Act
@@ -181,6 +192,27 @@ class MainViewModelTest : TestCase() {
         val r = viewModel.result.value
         assert(r is Result.Success)
         assertEquals(r?.getOrNull(), list)
+    }
+
+    @Test
+    fun `setFeaturedProducts() Given Products List updates _featuredProducts with sublist of the given list`() {
+        // Arrange
+
+        `when`(repository.getProducts())
+            .thenAnswer { Single.just(products) }
+
+        viewModel = MainViewModel(repository, TestSchedulers)
+        viewModel.featuredProducts.observeForever(observer)
+
+        // Act
+        viewModel.setFeaturedProducts(products)
+
+        // Assert
+        if(products.size > 5)
+            verify(observer).onChanged(products.subList(0, 5))
+        else
+            verify(observer).onChanged(products.subList(0, products.size - 1))
+
     }
 
 
