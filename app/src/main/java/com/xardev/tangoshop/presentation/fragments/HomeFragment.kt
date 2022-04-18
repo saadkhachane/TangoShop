@@ -10,17 +10,21 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.hilt.navigation.fragment.hiltNavGraphViewModels
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
-import com.bumptech.glide.Glide
 import com.xardev.tangoshop.R
 import com.xardev.tangoshop.databinding.FragmentHomeBinding
 import com.xardev.tangoshop.domain.models.Product
+import com.xardev.tangoshop.domain.schedulers.DefaultSchedulers
 import com.xardev.tangoshop.presentation.adapters.ProductRecyclerAdapter
+import com.xardev.tangoshop.presentation.adapters.ProductSliderAdapter
 import com.xardev.tangoshop.presentation.viewModels.MainViewModel
 import com.xardev.tangoshop.utils.Result.Failure
 import com.xardev.tangoshop.utils.Result.Success
 import dagger.hilt.android.AndroidEntryPoint
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.disposables.Disposable
+import java.util.concurrent.TimeUnit
+
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
@@ -29,9 +33,15 @@ class HomeFragment : Fragment() {
 
     val viewModel: MainViewModel by hiltNavGraphViewModels(R.id.nav_graph)
 
-    private val adapter: ProductRecyclerAdapter by lazy {
+    private val recyclerAdapter: ProductRecyclerAdapter by lazy {
         ProductRecyclerAdapter(requireContext())
     }
+
+    private val sliderAdapter by lazy {
+        ProductSliderAdapter(requireContext())
+    }
+
+    private var sliderRotationDisposable: Disposable? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,9 +54,30 @@ class HomeFragment : Fragment() {
         setClickListeners()
         setSearchListener()
         setupRecycler()
+        setupProductSlider()
         setupObservers()
 
         return binding.root
+    }
+
+    private fun setupProductSlider() {
+        binding.viewPager.adapter = sliderAdapter
+        binding.tabLayout.setupWithViewPager(binding.viewPager, true)
+        setAutoRotation()
+    }
+
+    private fun setAutoRotation() {
+        if (sliderRotationDisposable == null)
+        sliderRotationDisposable = Observable.interval(0, 2, TimeUnit.SECONDS)
+            .subscribeOn(DefaultSchedulers.IO)
+            .observeOn(DefaultSchedulers.MAIN)
+            .subscribe({
+                if (binding.viewPager.currentItem < 4){
+                    binding.viewPager.currentItem = binding.viewPager.currentItem + 1
+                }else {
+                    binding.viewPager.currentItem = 0
+                }
+            }, {})
     }
 
     private fun setSearchListener() {
@@ -69,21 +100,6 @@ class HomeFragment : Fragment() {
         binding.btnRefresh.setOnClickListener {
             refresh()
         }
-        binding.btnOrderNow.setOnClickListener {
-            if (viewModel.featuredProduct.value != null) {
-                val bundle = Bundle().apply {
-                    putSerializable("product", viewModel.featuredProduct.value)
-                }
-
-                Navigation.findNavController(binding.root)
-                    .navigate(
-                        R.id.productDetailsActivity,
-                        bundle,
-                        null
-                    )
-            }
-
-        }
     }
 
     @Suppress("UNCHECKED_CAST")
@@ -93,9 +109,15 @@ class HomeFragment : Fragment() {
 
                 when (it) {
                     is Success -> {
-                        viewModel.showFeaturedProducts(it.value as List<Product>)
-                        binding.recycler.visibility = View.VISIBLE
-                        adapter.updateList(it.value)
+                        showProductSlider()
+                        showRecyclerView()
+
+                        recyclerAdapter.updateList(it.value as List<Product>)
+
+                        // set featured products for slider
+                        viewModel.setFeaturedProducts(it.value)
+
+                        viewModel.startDealsCountDownTimer()
                     }
                     is Failure -> {
                         binding.recycler.visibility = View.GONE
@@ -106,18 +128,9 @@ class HomeFragment : Fragment() {
             }
         }
 
-        viewModel.featuredProduct.observe(viewLifecycleOwner) { product ->
-            product?.let {
-
-                viewModel.startDealsCountDownTimer()
-                if (binding.featuredProductsCard.isShown.not()) showFeaturedProductsCard()
-
-                val price = "$${product.gross_price}"
-                binding.featuredPrice.text = price
-
-                Glide.with(this)
-                    .load(product.images[0].image)
-                    .into(binding.featuredImage)
+        viewModel.featuredProducts.observe(viewLifecycleOwner){
+            it?.let {
+                sliderAdapter.updateList(it)
             }
         }
 
@@ -130,14 +143,13 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun showFeaturedProductsCard() {
-        TransitionManager.beginDelayedTransition(binding.constraintLayout)
-        binding.featuredProductsCard.visibility = View.VISIBLE
+    private fun showRecyclerView() {
+        binding.recycler.visibility = View.VISIBLE
     }
 
-    override fun onStart() {
-        super.onStart()
-        //refresh()
+    private fun showProductSlider() {
+        TransitionManager.beginDelayedTransition(binding.constraintLayout)
+        binding.featuredProductsCard.visibility = View.VISIBLE
     }
 
     private fun refresh() {
@@ -150,7 +162,12 @@ class HomeFragment : Fragment() {
     private fun setupRecycler() {
         val layoutManager = GridLayoutManager(requireContext(), 2)
         binding.recycler.layoutManager = layoutManager
-        binding.recycler.adapter = adapter
+        binding.recycler.adapter = recyclerAdapter
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        sliderRotationDisposable?.dispose()
     }
 
 }

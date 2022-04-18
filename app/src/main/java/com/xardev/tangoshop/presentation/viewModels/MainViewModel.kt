@@ -11,9 +11,7 @@ import com.xardev.tangoshop.utils.Result
 import com.xardev.tangoshop.utils.Result.Failure
 import com.xardev.tangoshop.utils.Result.Success
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.disposables.CompositeDisposable
-import io.reactivex.rxjava3.disposables.Disposable
 import java.io.IOException
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
@@ -36,16 +34,14 @@ class MainViewModel @Inject constructor(
     private val _result = MutableLiveData<Result<*>>()
     val result: LiveData<Result<*>> = _result
 
-    private val _featuredProduct = MutableLiveData<Product>()
-    val featuredProduct: LiveData<Product> = _featuredProduct
+    private val _featuredProducts = MutableLiveData<List<Product>>()
+    val featuredProducts: LiveData<List<Product>> = _featuredProducts
 
     private val _dealTimer = MutableLiveData<Map<String, String>>()
     val dealTimer: LiveData<Map<String, String>> = _dealTimer
 
     private lateinit var countDownTimer: CountDownTimer
     private var isCountDownCancelled = true
-
-    private var featuredProductObservable = Disposable.empty()
 
     private val disposables = CompositeDisposable()
 
@@ -64,6 +60,7 @@ class MainViewModel @Inject constructor(
                 hideLoading()
                 hideNetworkError()
                 if (value.isEmpty()) showNoProducts() else hideNoProducts()
+
                 _result.postValue(Success(value))
             },
                 { error ->
@@ -101,20 +98,9 @@ class MainViewModel @Inject constructor(
 
     }
 
-    fun showFeaturedProducts(list: List<Product>) {
-        if (featuredProductObservable.isDisposed.not()) featuredProductObservable.dispose()
-
-        featuredProductObservable = Observable.zip(
-            Observable.fromIterable(list),
-            Observable.interval(5, TimeUnit.SECONDS),
-            ({ obs, _ -> obs })
-        ).subscribeOn(schedulers.IO)
-            .observeOn(schedulers.MAIN)
-            .repeat()
-            .subscribe { v -> _featuredProduct.postValue(v) }
-
-        disposables.add(featuredProductObservable)
-
+    fun setFeaturedProducts(list: List<Product>) {
+        if(list.size > 5) _featuredProducts.postValue(list.subList(0, 5))
+        else _featuredProducts.postValue(list.subList(0, list.size - 1))
     }
 
     private fun showLoading() {
@@ -178,15 +164,18 @@ class MainViewModel @Inject constructor(
 
     }
 
-    override fun onCleared() {
-        super.onCleared()
-        disposables.clear()
-        cancelCountDownTimer()
-    }
-
     private fun cancelCountDownTimer() {
         countDownTimer.cancel()
         isCountDownCancelled = true
     }
+
+    override fun onCleared() {
+        super.onCleared()
+
+        cancelCountDownTimer()
+        disposables.clear()
+    }
+
+
 
 }
