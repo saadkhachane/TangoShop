@@ -209,9 +209,9 @@ class MainViewModelTest : TestCase() {
 
         // Assert
         if(products.size > 5)
-            verify(observer).onChanged(products.subList(0, 5))
+            verify(observer, atLeastOnce()).onChanged(products.subList(0, 5))
         else
-            verify(observer).onChanged(products.subList(0, products.size - 1))
+            verify(observer, atLeastOnce()).onChanged(products.subList(0, products.size - 1))
 
     }
 

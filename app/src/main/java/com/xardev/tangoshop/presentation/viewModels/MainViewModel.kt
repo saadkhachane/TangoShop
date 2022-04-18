@@ -62,6 +62,7 @@ class MainViewModel @Inject constructor(
                 if (value.isEmpty()) showNoProducts() else hideNoProducts()
 
                 _result.postValue(Success(value))
+                setFeaturedProducts(value)
             },
                 { error ->
                     hideLoading()
@@ -99,8 +100,10 @@ class MainViewModel @Inject constructor(
     }
 
     fun setFeaturedProducts(list: List<Product>) {
-        if(list.size > 5) _featuredProducts.postValue(list.subList(0, 5))
-        else _featuredProducts.postValue(list.subList(0, list.size - 1))
+        if(list.isNotEmpty()){
+            if(list.size > 5) _featuredProducts.postValue(list.subList(0, 5))
+            else _featuredProducts.postValue(list.subList(0, list.size - 1))
+        }
     }
 
     private fun showLoading() {
