@@ -113,10 +113,6 @@ class HomeFragment : Fragment() {
                         showRecyclerView()
 
                         recyclerAdapter.updateList(it.value as List<Product>)
-
-                        // set featured products for slider
-                        viewModel.setFeaturedProducts(it.value)
-
                         viewModel.startDealsCountDownTimer()
                     }
                     is Failure -> {
