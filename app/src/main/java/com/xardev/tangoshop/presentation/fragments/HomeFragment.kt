@@ -51,13 +51,21 @@ class HomeFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
+        setupProductSlider()
+        setupRecycler()
         setClickListeners()
         setSearchListener()
-        setupRecycler()
-        setupProductSlider()
         setupObservers()
+        setupSwipeRefreshListener()
 
         return binding.root
+    }
+
+    private fun setupSwipeRefreshListener() {
+        binding.swipeRefresh.setOnRefreshListener {
+            refresh()
+        }
+
     }
 
     private fun setupProductSlider() {
@@ -68,16 +76,16 @@ class HomeFragment : Fragment() {
 
     private fun setAutoRotation() {
         if (sliderRotationDisposable == null)
-        sliderRotationDisposable = Observable.interval(0, 2, TimeUnit.SECONDS)
-            .subscribeOn(DefaultSchedulers.IO)
-            .observeOn(DefaultSchedulers.MAIN)
-            .subscribe({
-                if (binding.viewPager.currentItem < 4){
-                    binding.viewPager.currentItem = binding.viewPager.currentItem + 1
-                }else {
-                    binding.viewPager.currentItem = 0
-                }
-            }, {})
+            sliderRotationDisposable = Observable.interval(0, 2, TimeUnit.SECONDS)
+                .subscribeOn(DefaultSchedulers.IO)
+                .observeOn(DefaultSchedulers.MAIN)
+                .subscribe({
+                    if (binding.viewPager.currentItem < 4) {
+                        binding.viewPager.currentItem = binding.viewPager.currentItem + 1
+                    } else {
+                        binding.viewPager.currentItem = 0
+                    }
+                }, {})
     }
 
     private fun setSearchListener() {
@@ -91,8 +99,6 @@ class HomeFragment : Fragment() {
 
             override fun afterTextChanged(p0: Editable?) {
             }
-
-
         })
     }
 
@@ -110,13 +116,16 @@ class HomeFragment : Fragment() {
                 when (it) {
                     is Success -> {
                         showProductSlider()
+                        showDealsTimer()
                         showRecyclerView()
 
                         recyclerAdapter.updateList(it.value as List<Product>)
                         viewModel.startDealsCountDownTimer()
                     }
                     is Failure -> {
-                        binding.recycler.visibility = View.GONE
+                        hideProductSlider()
+                        hideDealsTimer()
+                        hideRecyclerView()
                     }
                     else -> {
                     }
@@ -124,7 +133,7 @@ class HomeFragment : Fragment() {
             }
         }
 
-        viewModel.featuredProducts.observe(viewLifecycleOwner){
+        viewModel.featuredProducts.observe(viewLifecycleOwner) {
             it?.let {
                 sliderAdapter.updateList(it)
             }
@@ -137,15 +146,10 @@ class HomeFragment : Fragment() {
                 binding.dealsTimer.timerSeconds.text = it["seconds"]
             }
         }
-    }
 
-    private fun showRecyclerView() {
-        binding.recycler.visibility = View.VISIBLE
-    }
-
-    private fun showProductSlider() {
-        TransitionManager.beginDelayedTransition(binding.constraintLayout)
-        binding.featuredProductsCard.visibility = View.VISIBLE
+        viewModel.isLoading.observe(viewLifecycleOwner) {
+            binding.swipeRefresh.isRefreshing = it
+        }
     }
 
     private fun refresh() {
@@ -159,6 +163,34 @@ class HomeFragment : Fragment() {
         val layoutManager = GridLayoutManager(requireContext(), 2)
         binding.recycler.layoutManager = layoutManager
         binding.recycler.adapter = recyclerAdapter
+    }
+
+    private fun showDealsTimer() {
+        TransitionManager.beginDelayedTransition(binding.constraintLayout)
+        binding.dealsTimer.layout.visibility = View.VISIBLE
+    }
+
+    private fun hideDealsTimer() {
+        TransitionManager.beginDelayedTransition(binding.constraintLayout)
+        binding.dealsTimer.layout.visibility = View.GONE
+    }
+
+    private fun showRecyclerView() {
+        binding.recycler.visibility = View.VISIBLE
+    }
+
+    private fun hideRecyclerView() {
+        binding.recycler.visibility = View.GONE
+    }
+
+    private fun showProductSlider() {
+        TransitionManager.beginDelayedTransition(binding.constraintLayout)
+        binding.featuredProductsCard.visibility = View.VISIBLE
+    }
+
+    private fun hideProductSlider() {
+        TransitionManager.beginDelayedTransition(binding.constraintLayout)
+        binding.featuredProductsCard.visibility = View.GONE
     }
 
     override fun onDestroy() {
