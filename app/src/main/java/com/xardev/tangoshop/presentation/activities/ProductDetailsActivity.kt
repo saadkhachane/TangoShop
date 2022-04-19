@@ -4,14 +4,18 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.bumptech.glide.Glide
 import com.xardev.tangoshop.R
 import com.xardev.tangoshop.databinding.ActivityProductDetailsBinding
 import com.xardev.tangoshop.domain.models.Product
+import com.xardev.tangoshop.presentation.adapters.ImagesSliderAdapter
 
 class ProductDetailsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityProductDetailsBinding
+
+    private val imagesSliderAdapter : ImagesSliderAdapter by lazy {
+        ImagesSliderAdapter(this)
+    }
 
     lateinit var product: Product
 
@@ -28,10 +32,13 @@ class ProductDetailsActivity : AppCompatActivity() {
         binding.lifecycleOwner = this
         binding.product = product
 
-        Glide.with(this)
-            .load(product.images[0].image)
-            .into(binding.image)
+        setupImagesSlider()
 
+    }
+
+    private fun setupImagesSlider() {
+        binding.viewPager.adapter = imagesSliderAdapter
+        imagesSliderAdapter.updateList(product.images)
     }
 
     private fun setClickListeners() {
