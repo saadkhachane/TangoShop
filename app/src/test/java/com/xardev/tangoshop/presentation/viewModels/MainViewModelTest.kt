@@ -9,6 +9,7 @@ import com.xardev.tangoshop.domain.schedulers.TestSchedulers
 import com.xardev.tangoshop.utils.Result
 import com.xardev.tangoshop.utils.exceptionOrNull
 import com.xardev.tangoshop.utils.getOrNull
+import com.xardev.tangoshop.utils.isLoading
 import io.reactivex.rxjava3.core.Single
 import junit.framework.TestCase
 import org.junit.Before
@@ -48,19 +49,28 @@ class MainViewModelTest : TestCase() {
     }
 
     @Test
-    fun `getProducts() Updates isLoading to true then to false`() {
+    fun `showLoading() returns Loading Result with value true`() {
         // Arrange
-        `when`(repository.getProducts())
-            .thenAnswer { Single.just(emptyList<Product>()) }
-
         viewModel = MainViewModel(repository, TestSchedulers)
         viewModel.isLoading.observeForever(observer)
 
         // Act
-        viewModel.getProducts()
+        viewModel.showLoading()
 
         // Assert
         verify(observer, atLeastOnce()).onChanged(true)
+    }
+
+    @Test
+    fun `hideLoading() returns Loading Result with value false`() {
+        // Arrange
+        viewModel = MainViewModel(repository, TestSchedulers)
+        viewModel.isLoading.observeForever(observer)
+
+        // Act
+        viewModel.hideLoading()
+
+        // Assert
         verify(observer, atLeastOnce()).onChanged(false)
     }
 

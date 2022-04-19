@@ -8,8 +8,7 @@ import com.xardev.tangoshop.domain.models.Product
 import com.xardev.tangoshop.domain.repositories.ProductRepository
 import com.xardev.tangoshop.domain.schedulers.SchedulersProvider
 import com.xardev.tangoshop.utils.Result
-import com.xardev.tangoshop.utils.Result.Failure
-import com.xardev.tangoshop.utils.Result.Success
+import com.xardev.tangoshop.utils.Result.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import java.io.IOException
@@ -106,13 +105,13 @@ class MainViewModel @Inject constructor(
         }
     }
 
-    private fun showLoading() {
+     fun showLoading() {
         _isLoading.postValue(true)
         hideNetworkError()
     }
 
-    private fun hideLoading() {
-        _isLoading.postValue(false)
+     fun hideLoading() {
+         _isLoading.postValue(false)
     }
 
     private fun showNetworkError() {
