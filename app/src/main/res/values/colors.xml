@@ -5,6 +5,7 @@
     <color name="secondary">#FF3876</color>
     <color name="secondary_variant">#EB1D5D</color>
     <color name="black">#FF000000</color>
+    <color name="black_56">#8F000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="text_primary">#D9000000</color>
     <color name="text_secondary">#8F000000</color>
